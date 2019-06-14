@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "baseUrl": ".",
+    "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
     "module": "esnext",
@@ -17,6 +17,18 @@
     "lib": [
       "es2018",
       "dom"
-    ]
-  }
+    ],
+    "paths": {
+      "@test/libA": [
+        "projects/lib-a/src/public-api.ts"
+      ],
+      "@test/libB": [
+        "projects/lib-b/src/public-api.ts"
+      ],
+      "@test/libC": [
+        "projects/lib-c/src/public-api.ts"
+      ]
+    }
+  },
+  "exclude": [ "node_modules"]
 }
